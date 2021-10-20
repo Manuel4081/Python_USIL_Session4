@@ -6,6 +6,10 @@ before_install:
   - pip install -U pip
 install:
   - pip install -r requirements.txt
+addons:
+  sonarcloud:
+    organization: "usil-manuel"
 script:
   - pytest
   - behave ./test_aceptance/
+  - sonar-scanner
