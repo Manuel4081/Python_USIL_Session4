@@ -10,6 +10,6 @@ addons:
   sonarcloud:
     organization: "usil-manuel"
 script:
-  - pytest
+  - pytest -v --cov --cov-report=xml --cov-report=html
   - behave ./test_aceptance/
   - sonar-scanner
