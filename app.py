@@ -1,11 +1,20 @@
-from src.clases.ExpresionFinal import ExpresionFinal
+from src.empleado.Employee import Employee
+from src.empleado.ExternalEmployee import ExternalEmployee
+from src.empleado.InternalEmployee import InternalEmployee
 
-expresion = input("Ingresé expresion ha revisar: ")
+normal_employee = Employee('Pedro', 'Arias')
+external_employee = ExternalEmployee('Luis', 'Aguirre')
+internal_employee = InternalEmployee('Mary', 'Musk')
 
-Ingreso = ExpresionFinal(expresion)
-Ingreso.Procesar()
+normal_employee.set_sales([100, 80, 20])
+external_employee.set_sales([100, 80, 20])
+internal_employee.set_sales([100, 80, 20])
 
-print("Lista: " + Ingreso.ArchivosLista() + "\n")
-print("Expresion Repetida:" + Ingreso.ArchivosDuplicado() + "\n")
-print("Diccionario: " + Ingreso.ArchivosDiccionario() + "\n")
-print("Cantidad Repeticiones: " + Ingreso.CantDuplicados() + "\n")
+print(normal_employee.get_info())
+print(normal_employee.get_salary())
+
+print(external_employee.get_info())
+print(external_employee.get_salary())
+
+print(internal_employee.get_info())
+print(internal_employee.get_salary())
