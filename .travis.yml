@@ -8,4 +8,4 @@ install:
   - pip install -r requeriments.txt
 script:
   - pytest
-  - behave ./test/
+  - behave ./test_aceptance/
